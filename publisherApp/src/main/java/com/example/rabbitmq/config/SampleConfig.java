@@ -1,4 +1,4 @@
-package com.example.publisherApp.config;
+package com.example.rabbitmq.config;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
@@ -9,13 +9,12 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.amqp.support.converter.MessageConverter;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 public class SampleConfig {
 
     private static final String EXCHANGE_NAME = "sample.exchange";
     private static final String QUEUE_NAME = "sample.queue";
-    private static final String ROUTING_KEY = "sample.oingdaddy.#";
+    private static final String ROUTING_KEY = "sample.dong.#";
 
     @Bean
     TopicExchange exchange() {
