@@ -1,10 +1,7 @@
-package com.example.rabbitmq.vo;
+package com.example.rebbitmq.vo;
 
-import java.io.Serializable;
+public class Member {
 
-public class Member implements Serializable {
-
-    private static final long serialVersionUID = 6529685098267757690L;
     private String name;
     private int age;
     private String tel;
@@ -15,6 +12,9 @@ public class Member implements Serializable {
         this.tel = tel;
     }
 
+    public Member() {
+    }
+
     @Override
     public String toString() {
         return "Member{" +
@@ -22,6 +22,18 @@ public class Member implements Serializable {
                 ", age=" + age +
                 ", tel='" + tel + '\'' +
                 '}';
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setTel(String tel) {
+        this.tel = tel;
     }
 
     public String getName() {

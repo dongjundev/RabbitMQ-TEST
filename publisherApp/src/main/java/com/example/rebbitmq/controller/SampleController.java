@@ -1,6 +1,7 @@
-package com.example.rabbitmq.controller;
+package com.example.rebbitmq.controller;
 
-import com.example.rabbitmq.vo.Member;
+import com.example.rebbitmq.config.SampleConfig;
+import com.example.rebbitmq.vo.Member;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,7 +26,7 @@ public class SampleController {
     @GetMapping("/sample/member")
     public String objectPublish() {
         Member member = new Member("홍길동", 18, "010-1234-5678");
-        rabbitTemplate.convertAndSend(EXCHANGE_NAME, "sample.dong.#", member);
+        rabbitTemplate.convertAndSend(SampleConfig.EXCHANGE_NAME, SampleConfig.ROUTING_KEY, member);
         return "object sending!";
     }
 

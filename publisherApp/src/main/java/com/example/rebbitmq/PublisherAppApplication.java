@@ -1,13 +1,12 @@
-package com.example.rabbitmq;
+package com.example.rebbitmq;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ConsumerAppApplication {
+public class PublisherAppApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ConsumerAppApplication.class, args);
+		SpringApplication.run(PublisherAppApplication.class, args);
 	}
-
 }
